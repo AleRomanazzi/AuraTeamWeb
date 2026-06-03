@@ -121,7 +121,7 @@ export default function Home() {
             {/* Line 1: "Presencia Online" — solid white */}
             <span style={{
               display: 'block',
-              fontSize: 'clamp(4rem, 11vw, 9rem)',
+              fontSize: 'clamp(2rem, 10vw, 9rem)',
               color: '#f8fafc',
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
@@ -131,7 +131,7 @@ export default function Home() {
             {/* Line 2: "Profesional" — gradient, scaled to match line 1 width */}
             <span style={{
               display: 'block',
-              fontSize: 'clamp(5.8rem, 16vw, 13rem)',
+              fontSize: 'clamp(2.5rem, 14vw, 13rem)',
               background: 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 45%, #818cf8 100%)',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',

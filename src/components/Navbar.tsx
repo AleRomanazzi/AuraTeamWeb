@@ -29,24 +29,23 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 1px 0 rgba(255,255,255,0.05)' : 'none',
       }}
     >
-      <div className="navbar-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
-        <nav className="navbar-nav" style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', height: '72px' }}>
-          {/* Logo — columna izquierda */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', minWidth: 0 }}>
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem', boxSizing: 'border-box' }}>
+        <nav style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '64px', position: 'relative' }}>
+
+          {/* Logo */}
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', flexShrink: 0 }}>
             <img
               src={nav.logo}
               alt="AuraTeam"
-              className="navbar-logo-img"
-              style={{ height: '56px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
+              style={{ height: '44px', width: 'auto', objectFit: 'contain' }}
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none';
               }}
             />
           </Link>
 
-          {/* Desktop Links */}
-          <ul style={{ display: 'flex', alignItems: 'center', gap: '2rem', listStyle: 'none', margin: 0, padding: 0 }}
-            className="hidden-mobile">
+          {/* Desktop Links — centered absolutely */}
+          <ul className="nav-desktop-links" style={{ listStyle: 'none', margin: 0, padding: 0, display: 'flex', alignItems: 'center', gap: '2rem', position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
             {nav.links.map((link) => (
               <li key={link.href}>
                 <Link
@@ -69,11 +68,11 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* CTA + hamburger — columna derecha */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '1rem', flexShrink: 0 }}>
+          {/* Right side: CTA (desktop) + Hamburger (mobile) */}
+          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', flexShrink: 0 }}>
             <Link
               to={nav.cta.href}
-              className="glow-btn hidden-mobile"
+              className="glow-btn nav-desktop-cta"
               style={{
                 background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                 color: '#fff',
@@ -93,15 +92,16 @@ export default function Navbar() {
             {/* Hamburger */}
             <button
               onClick={() => setOpen(!open)}
-              className="show-mobile"
+              className="nav-hamburger"
               style={{
                 background: 'none',
                 border: 'none',
                 cursor: 'pointer',
-                padding: '0.5rem',
+                padding: '8px',
                 display: 'flex',
                 flexDirection: 'column',
                 gap: '5px',
+                flexShrink: 0,
               }}
               aria-label="Toggle menu"
             >
@@ -180,28 +180,17 @@ export default function Navbar() {
       </div>
 
       <style>{`
+        /* Desktop */
         @media (min-width: 768px) {
-          .hidden-mobile { display: flex !important; }
-          .show-mobile { display: none !important; }
+          .nav-desktop-links { display: flex !important; }
+          .nav-desktop-cta   { display: inline-block !important; }
+          .nav-hamburger     { display: none !important; }
         }
+        /* Mobile */
         @media (max-width: 767px) {
-          .hidden-mobile { display: none !important; }
-          .show-mobile { display: flex !important; }
-          .navbar-container {
-            padding-left: 1rem !important;
-            padding-right: 1rem !important;
-          }
-          .navbar-nav {
-            display: flex !important;
-            justify-content: space-between !important;
-            align-items: center !important;
-            height: 64px !important;
-            width: 100% !important;
-          }
-          .navbar-logo-img {
-            height: 44px !important;
-            max-width: 130px;
-          }
+          .nav-desktop-links { display: none !important; }
+          .nav-desktop-cta   { display: none !important; }
+          .nav-hamburger     { display: flex !important; }
         }
       `}</style>
     </header>
