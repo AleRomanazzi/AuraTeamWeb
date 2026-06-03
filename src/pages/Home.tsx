@@ -280,7 +280,7 @@ export default function Home() {
           }}>
             {[
               { value: '12+', label: 'Marcas confiaron en nosotros' },
-              { value: '2018', label: 'Desde' },
+              { value: '2025', label: 'Desde' },
               { value: '3', label: 'Especialidades' },
             ].map((stat, i) => (
               <div
