@@ -11,6 +11,7 @@ import marcaCEFN5 from '../assets/MarcasTrabajadas/CEFN5.png';
 import marcaLennon from '../assets/MarcasTrabajadas/Lennon_logo.png';
 import marcaUrbanFitness from '../assets/MarcasTrabajadas/urbanfitness.png';
 import marcaHaut from '../assets/MarcasTrabajadas/Haut.png';
+import marcaDraKarina from '../assets/MarcasTrabajadas/DraKarinaSantellan.png';
 
 import photoAnduFront from '../assets/EquipoAura/aurateam-35-andu.jpg';
 import photoAnduAction from '../assets/EquipoAura/aurateam-59-andu3.jpg';
@@ -80,6 +81,7 @@ export const clientLogos: { name: string; url: string }[] = [
   { name: 'Lennon', url: marcaLennon },
   { name: 'Urban Fitness', url: marcaUrbanFitness },
   { name: 'Haut', url: marcaHaut },
+  { name: 'Dra. Karina Santellan', url: marcaDraKarina },
 ];
 
 export const portfolioVideos = {
