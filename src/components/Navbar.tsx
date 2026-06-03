@@ -29,14 +29,15 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 1px 0 rgba(255,255,255,0.05)' : 'none',
       }}
     >
-      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
+      <div className="navbar-container" style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 1.5rem' }}>
         <nav className="navbar-nav" style={{ display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center', height: '72px' }}>
           {/* Logo — columna izquierda */}
-          <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start' }}>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-start', minWidth: 0 }}>
             <img
               src={nav.logo}
               alt="AuraTeam"
-              style={{ height: '60px', width: 'auto', objectFit: 'contain' }}
+              className="navbar-logo-img"
+              style={{ height: '56px', width: 'auto', objectFit: 'contain', flexShrink: 0 }}
               onError={(e) => {
                 (e.target as HTMLImageElement).style.display = 'none';
               }}
@@ -69,7 +70,7 @@ export default function Navbar() {
           </ul>
 
           {/* CTA + hamburger — columna derecha */}
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '1rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: '1rem', flexShrink: 0 }}>
             <Link
               to={nav.cta.href}
               className="glow-btn hidden-mobile"
@@ -186,9 +187,20 @@ export default function Navbar() {
         @media (max-width: 767px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: flex !important; }
+          .navbar-container {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+          }
           .navbar-nav {
             display: flex !important;
             justify-content: space-between !important;
+            align-items: center !important;
+            height: 64px !important;
+            width: 100% !important;
+          }
+          .navbar-logo-img {
+            height: 44px !important;
+            max-width: 130px;
           }
         }
       `}</style>
