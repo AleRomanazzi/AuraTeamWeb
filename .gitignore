@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment variables — keys y credenciales
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Claude Code
+.claude/
+.agents/
+
+# Archivos internos del proyecto
+aurateam-clone-prompt.md
+SKILL.md
+skills-lock.json
