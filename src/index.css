@@ -87,6 +87,31 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(100%);
 }
 
+/* Video shorts grid */
+.shorts-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.75rem;
+}
+
+@media (max-width: 900px) {
+  .shorts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 580px) {
+  .shorts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* Center the 5th short (lone item in last row) */
+  .shorts-grid > :last-child:nth-child(odd) {
+    grid-column: span 2;
+    max-width: calc(50% - 0.375rem);
+    margin-inline: auto;
+  }
+}
+
 /* Portfolio image hover */
 .portfolio-item {
   overflow: hidden;

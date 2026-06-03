@@ -82,6 +82,17 @@ export const clientLogos: { name: string; url: string }[] = [
   { name: 'Haut', url: marcaHaut },
 ];
 
+export const portfolioVideos = {
+  featured: { id: 'QEZB7AHm3Dc', title: 'Producción audiovisual' },
+  shorts: [
+    { id: 'Ox-eOGHe33E', title: 'Short 1' },
+    { id: 'jL-90vBF0Q8', title: 'Short 2' },
+    { id: 'Gz6UJzn6AuE', title: 'Short 3' },
+    { id: '5N_lBNewBEM', title: 'Short 4' },
+    { id: 'otulYAXQmJ4', title: 'Short 5' },
+  ],
+};
+
 export const portfolioImages = [
   { src: 'https://aurateam.com.ar/wp-content/uploads/2025/05/TNX-083a.jpg', alt: 'Trabajo 1' },
   { src: 'https://aurateam.com.ar/wp-content/uploads/2025/05/TNX-079.jpg', alt: 'Trabajo 2' },

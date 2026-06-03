@@ -1,4 +1,24 @@
 import PortfolioGrid from '../components/PortfolioGrid';
+import VideoGallery from '../components/VideoGallery';
+
+function SectionLabel({ label }: { label: string }) {
+  return (
+    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
+      <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.07)' }} />
+      <span style={{
+        fontFamily: "'Roboto', sans-serif",
+        fontSize: '0.75rem',
+        fontWeight: 600,
+        letterSpacing: '0.14em',
+        textTransform: 'uppercase',
+        color: '#3b82f6',
+      }}>
+        {label}
+      </span>
+      <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.07)' }} />
+    </div>
+  );
+}
 
 export default function Portafolio() {
   return (
@@ -66,14 +86,23 @@ export default function Portafolio() {
               opacity: 0,
             }}
           >
-            Fotografía, videografía y contenido aéreo. Hacé clic en cualquier imagen para verla en detalle.
+            Videos y fotografía que hablan por sí solos. Hacé clic en cualquier imagen para verla en detalle.
           </p>
         </div>
       </section>
 
-      {/* Grid */}
-      <section style={{ padding: '2rem 1.5rem 6rem' }}>
+      {/* Videos section */}
+      <section style={{ padding: '0 1.5rem 5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <SectionLabel label="Videos" />
+          <VideoGallery />
+        </div>
+      </section>
+
+      {/* Photography section */}
+      <section style={{ padding: '0 1.5rem 6rem' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <SectionLabel label="Fotografía" />
           <PortfolioGrid />
         </div>
       </section>
