@@ -1,5 +1,20 @@
 import logoBlancoUrl from '../assets/logo blanco png.png';
 
+import pAlerom130   from '../assets/Portafolio/alerom-130.jpg';
+import pAlerom164   from '../assets/Portafolio/alerom-164.jpg';
+import pAnionuevo12 from '../assets/Portafolio/anionuevo-12.jpg';
+import pBmx24       from '../assets/Portafolio/bmx-24.jpg';
+import pBmx49       from '../assets/Portafolio/bmx-49.jpg';
+import pLennon29    from '../assets/Portafolio/lennon-29.jpg';
+import pMart7       from '../assets/Portafolio/mart-7.jpg';
+import pMateo010    from '../assets/Portafolio/mateo-010.jpg';
+import pPollock32   from '../assets/Portafolio/pollock-32.jpg';
+import pRam33       from '../assets/Portafolio/ram-33.jpg';
+import pTNX083a     from '../assets/Portafolio/TNX-083a.jpg';
+import pTNX100      from '../assets/Portafolio/TNX-100.jpg';
+import pTNX106      from '../assets/Portafolio/TNX-106.jpg';
+import pTNX107      from '../assets/Portafolio/TNX-107.jpg';
+
 import marcaEnredados from '../assets/MarcasTrabajadas/Enredados.png';
 import marcaNaranjaX from '../assets/MarcasTrabajadas/Naranja-X.png';
 import marcaAmnesia from '../assets/MarcasTrabajadas/Amnesia.png';
@@ -96,15 +111,20 @@ export const portfolioVideos = {
 };
 
 export const portfolioImages = [
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/05/TNX-083a.jpg', alt: 'Trabajo 1' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/05/TNX-079.jpg', alt: 'Trabajo 2' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/air-2.jpg', alt: 'Fotografía aérea' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/DJI_20250106213919_0056_D-scaled.jpg', alt: 'Drone 1' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/DANS-FONDOazul-3.jpg', alt: 'Producción 1' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/ergon-57-scaled.jpg', alt: 'Ergon 1' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/ergon-79-scaled.jpg', alt: 'Ergon 2' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/boxin-78.jpg', alt: 'Boxin' },
-  { src: 'https://aurateam.com.ar/wp-content/uploads/2025/04/DJI_20250106195956_0054_D-scaled.jpg', alt: 'Drone 2' },
+  { src: pAlerom130,   alt: 'Sesión fotográfica' },
+  { src: pAlerom164,   alt: 'Retrato profesional' },
+  { src: pAnionuevo12, alt: 'Evento Año Nuevo' },
+  { src: pBmx24,       alt: 'BMX – acción' },
+  { src: pLennon29,    alt: 'Lennon – retrato' },
+  { src: pMateo010,    alt: 'Sesión exterior' },
+  { src: pTNX083a,     alt: 'TNX – evento' },
+  { src: pBmx49,       alt: 'BMX – retrato en acción' },
+  { src: pTNX107,      alt: 'TNX – vertical' },
+  { src: pTNX100,      alt: 'TNX – producción' },
+  { src: pMart7,       alt: 'Retrato creativo' },
+  { src: pTNX106,      alt: 'TNX – escena' },
+  { src: pPollock32,   alt: 'Pollock – retrato' },
+  { src: pRam33,       alt: 'Retrato ram' },
 ];
 
 export const portfolioSection = {

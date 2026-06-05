@@ -329,16 +329,15 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Masonry-style grid */}
+          {/* Preview grid — 5 imágenes: 1 destacada (span 2) + 4 cuadradas */}
           <div style={{
             display: 'grid',
             gridTemplateColumns: 'repeat(3, 1fr)',
-            gridTemplateRows: 'auto',
             gap: '0.75rem',
           }}
             className="portfolio-home-grid"
           >
-            {portfolioImages.map((img, i) => (
+            {portfolioImages.slice(0, 5).map((img, i) => (
               <div
                 key={i}
                 className="portfolio-item"
@@ -348,7 +347,7 @@ export default function Home() {
                   overflow: 'hidden',
                   background: '#0b1221',
                   gridColumn: i === 0 ? 'span 2' : undefined,
-                  aspectRatio: i === 0 ? '16/9' : '4/3',
+                  aspectRatio: i === 0 ? '4/3' : '1/1',
                 }}
               >
                 <img
@@ -489,6 +488,7 @@ export default function Home() {
           }
           .portfolio-home-grid > div:first-child {
             grid-column: span 2 !important;
+            aspect-ratio: 16/9 !important;
           }
         }
         @media (max-width: 520px) {
