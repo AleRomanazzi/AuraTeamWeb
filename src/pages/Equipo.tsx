@@ -77,7 +77,7 @@ export default function Equipo() {
       {/* Team cards */}
       <section style={{ padding: '2rem 1.5rem 5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '1.25rem' }}>
             {teamMembers.map((member, i) => (
               <TeamCard key={i} member={member} delay={i * 120} />
             ))}
@@ -176,7 +176,7 @@ export default function Equipo() {
             background: 'linear-gradient(135deg, rgba(37,99,235,0.08) 0%, rgba(6,11,20,0) 100%)',
             border: '1px solid rgba(37,99,235,0.12)',
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))',
             gap: '2.5rem',
             alignItems: 'center',
           }}>

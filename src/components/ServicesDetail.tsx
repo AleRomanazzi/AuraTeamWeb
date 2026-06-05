@@ -1,7 +1,7 @@
 import { serviciosPage } from '../data/content';
 
 const categoryIcons: Record<string, string> = {
-  'Fotografía y Diseño Multimedia': '📸',
+  'Fotografía y diseño multimedia': '📸',
   'Desarrollo web': '🌐',
   'Comunicación y gestión': '📣',
 };
@@ -38,7 +38,7 @@ export default function ServicesDetail() {
             </h3>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '1rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(min(240px, 100%), 1fr))', gap: '1rem' }}>
             {group.items.map((item, ii) => (
               <div
                 key={ii}

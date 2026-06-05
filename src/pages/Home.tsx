@@ -240,7 +240,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.25rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(280px, 100%), 1fr))', gap: '1.25rem' }}>
             {serviceCards.map((card, i) => (
               <ServiceCard key={i} {...card} delay={i * 100} />
             ))}
@@ -272,12 +272,14 @@ export default function Home() {
           <LogoSlider logos={clientLogos} />
 
           {/* Stats — fila horizontal debajo de las marcas */}
-          <div style={{
-            display: 'flex',
-            marginTop: '3.5rem',
-            paddingTop: '2.5rem',
-            borderTop: '1px solid rgba(255,255,255,0.06)',
-          }}>
+          <div
+            className="stats-row"
+            style={{
+              display: 'flex',
+              marginTop: '3.5rem',
+              paddingTop: '2.5rem',
+              borderTop: '1px solid rgba(255,255,255,0.06)',
+            }}>
             {[
               { value: '12+', label: 'Marcas confiaron en nosotros' },
               { value: '2025', label: 'Desde' },
@@ -285,6 +287,7 @@ export default function Home() {
             ].map((stat, i) => (
               <div
                 key={i}
+                className={`stat-item stat-item-${i}`}
                 style={{
                   flex: 1,
                   textAlign: 'center',
@@ -487,7 +490,21 @@ export default function Home() {
           .portfolio-home-grid > div:first-child {
             grid-column: span 2 !important;
           }
-
+        }
+        @media (max-width: 520px) {
+          .stats-row {
+            flex-direction: column !important;
+          }
+          .stat-item {
+            flex: none !important;
+            padding: 1rem 0 !important;
+            border-right: none !important;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            text-align: left !important;
+          }
+          .stat-item-2 {
+            border-bottom: none;
+          }
         }
       `}</style>
     </>

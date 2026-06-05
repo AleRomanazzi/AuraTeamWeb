@@ -132,13 +132,13 @@ export const serviciosPage = [
     items: [
       { title: 'Fotografía profesional', description: 'Eventos sociales, sesiones en estudio y exterior y fotoproducto profesional.' },
       { title: 'Videografía y filmación', description: 'Cobertura de eventos, videoclips y producciones audiovisuales en estudio.' },
-      { title: 'Diseño Gráfico', description: 'Creacion de marca, flyers y tarjetas personales/invitación.' },
+      { title: 'Diseño gráfico', description: 'Creacion de marca, flyers y tarjetas personales/invitación.' },
     ],
   },
   {
     category: 'Desarrollo web',
     items: [
-      { title: 'Landing Pages', description: 'Diseño de páginas web simples, efectivas y enfocadas en resultados.' },
+      { title: 'Landing pages', description: 'Diseño de páginas web simples, efectivas y enfocadas en resultados.' },
       { title: 'Desarrollo de sistemas de gestión', description: 'Creamos sistemas personalizados para negocios medianos y grandes.' },
       { title: 'Cobertura de drone', description: 'Filmación y fotografía de eventos, terrenos a lo largo del país.' },
     ],

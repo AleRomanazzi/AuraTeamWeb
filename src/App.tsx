@@ -11,7 +11,7 @@ import WhatsAppButton from './components/WhatsAppButton';
 export default function App() {
   return (
     <BrowserRouter>
-      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+      <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', width: '100%' }}>
         <Navbar />
         <main style={{ flex: 1 }}>
           <Routes>
