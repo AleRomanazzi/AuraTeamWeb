@@ -58,7 +58,7 @@ export default function Servicios() {
           <p
             className="animate-fade-up delay-200"
             style={{
-              color: '#64748b',
+              color: '#94a3b8',
               fontSize: 'clamp(1.05rem, 1.4vw, 1.2rem)',
               lineHeight: '1.8',
               letterSpacing: '0.01em',
@@ -91,7 +91,7 @@ export default function Servicios() {
             <h2 style={{ fontFamily: "'League Gothic',sans-serif", fontWeight: 800, fontSize: 'clamp(1.8rem, 3vw, 2.6rem)', letterSpacing: '0.03em', color: '#f1f5f9', marginBottom: '1rem' }}>
               ¿Te interesa algún servicio?
             </h2>
-            <p style={{ color: '#64748b', marginBottom: '1.75rem', maxWidth: '480px', margin: '0 auto 1.75rem', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em' }}>
+            <p style={{ color: '#94a3b8', marginBottom: '1.75rem', maxWidth: '480px', margin: '0 auto 1.75rem', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em' }}>
               Contactanos y te armamos una propuesta a medida según tus objetivos.
             </p>
             <Link

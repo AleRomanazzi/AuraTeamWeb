@@ -60,7 +60,7 @@ export default function Equipo() {
           <p
             className="animate-fade-up delay-200"
             style={{
-              color: '#64748b',
+              color: '#94a3b8',
               fontSize: 'clamp(1.05rem, 1.4vw, 1.2rem)',
               lineHeight: '1.8',
               letterSpacing: '0.01em',
@@ -159,7 +159,7 @@ export default function Equipo() {
             }}>
               Lo que ofrecemos
             </h2>
-            <p style={{ color: '#64748b', maxWidth: '480px', margin: '0 auto', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em' }}>
+            <p style={{ color: '#94a3b8', maxWidth: '480px', margin: '0 auto', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em' }}>
               Cada integrante aporta su especialidad para entregar resultados completos e integrados.
             </p>
           </div>
@@ -206,7 +206,7 @@ export default function Equipo() {
               </h2>
             </div>
             <div>
-              <p style={{ color: '#64748b', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em', marginBottom: '1.75rem' }}>
+              <p style={{ color: '#94a3b8', lineHeight: '1.8', fontSize: '1.05rem', letterSpacing: '0.01em', marginBottom: '1.75rem' }}>
                 {workingMethod.text}
               </p>
               <Link

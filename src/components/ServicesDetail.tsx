@@ -68,7 +68,7 @@ export default function ServicesDetail() {
                 }}>
                   {item.title}
                 </h4>
-                <p style={{ color: '#64748b', fontSize: '0.95rem', lineHeight: '1.7', letterSpacing: '0.01em' }}>
+                <p style={{ color: '#94a3b8', fontSize: '0.95rem', lineHeight: '1.7', letterSpacing: '0.01em' }}>
                   {item.description}
                 </p>
               </div>

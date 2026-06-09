@@ -48,7 +48,7 @@ export default function ServiceCard({ title, description, cta, icon, delay = 0 }
       </h3>
 
       <p style={{
-        color: '#64748b',
+        color: '#94a3b8',
         fontSize: '1rem',
         lineHeight: '1.75',
         letterSpacing: '0.01em',

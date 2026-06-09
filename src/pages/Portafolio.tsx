@@ -77,7 +77,7 @@ export default function Portafolio() {
           <p
             className="animate-fade-up delay-200"
             style={{
-              color: '#64748b',
+              color: '#94a3b8',
               fontSize: 'clamp(1.05rem, 1.4vw, 1.2rem)',
               lineHeight: '1.8',
               letterSpacing: '0.01em',

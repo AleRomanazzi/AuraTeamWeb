@@ -39,7 +39,7 @@ export default function Home() {
         alignItems: 'center',
         position: 'relative',
         overflow: 'hidden',
-        padding: '0 2rem',
+        padding: '4rem 2rem 0',
       }}>
         {/* Multi-layer atmospheric glow */}
         <div style={{
@@ -104,7 +104,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%', paddingTop: '80px' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto', width: '100%' }}>
 
           <SectionLabel>Agencia creativa · La Rioja, Argentina</SectionLabel>
 
@@ -118,7 +118,7 @@ export default function Home() {
               marginBottom: '0',
             }}
           >
-            {/* Line 1: "Presencia Online" — solid white */}
+            {/* Line 1 */}
             <span style={{
               display: 'block',
               fontSize: 'clamp(2rem, 10vw, 9rem)',
@@ -128,14 +128,11 @@ export default function Home() {
             }}>
               Presencia Online
             </span>
-            {/* Line 2: "Profesional" — gradient, scaled to match line 1 width */}
+            {/* Line 2 — larger in Aura Blue Light */}
             <span style={{
               display: 'block',
               fontSize: 'clamp(2.5rem, 14vw, 13rem)',
-              background: 'linear-gradient(135deg, #60a5fa 0%, #3b82f6 45%, #818cf8 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
+              color: '#60a5fa',
               letterSpacing: '0.04em',
               textTransform: 'uppercase',
             }}>
@@ -222,7 +219,6 @@ export default function Home() {
       {/* ── SERVICES ─────────────────────────────────────────────── */}
       <section style={{ padding: '6rem 1.5rem', position: 'relative' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <SectionLabel>Servicios</SectionLabel>
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
             <h2 style={{
               fontFamily: "'League Gothic', sans-serif",
@@ -235,7 +231,7 @@ export default function Home() {
             }}>
               {servicesIntro.heading}
             </h2>
-            <p style={{ color: '#64748b', lineHeight: '1.8', fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', letterSpacing: '0.01em' }}>
+            <p style={{ color: '#94a3b8', lineHeight: '1.8', fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', letterSpacing: '0.01em' }}>
               {servicesIntro.paragraph}
             </p>
           </div>
@@ -251,7 +247,6 @@ export default function Home() {
       {/* ── CLIENT LOGOS ─────────────────────────────────────────── */}
       <section style={{ padding: '5rem 1.5rem', borderTop: '1px solid rgba(255,255,255,0.04)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <SectionLabel>Clientes</SectionLabel>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 style={{
               fontFamily: "'League Gothic', sans-serif",
@@ -264,7 +259,7 @@ export default function Home() {
             }}>
               Marcas que confiaron en nosotros
             </h2>
-            <p style={{ color: '#64748b', fontSize: '1.05rem', letterSpacing: '0.01em', maxWidth: '440px', margin: '0 auto', lineHeight: '1.8' }}>
+            <p style={{ color: '#94a3b8', fontSize: '1.05rem', letterSpacing: '0.01em', maxWidth: '440px', margin: '0 auto', lineHeight: '1.8' }}>
               Empresas y proyectos que eligieron a Aura para potenciar su presencia.
             </p>
           </div>
@@ -299,7 +294,7 @@ export default function Home() {
                 <div style={{ fontFamily: "'League Gothic', sans-serif", fontSize: '2.8rem', color: '#f1f5f9', lineHeight: 1, letterSpacing: '0.03em' }}>
                   {stat.value}
                 </div>
-                <div style={{ color: '#475569', fontSize: '0.78rem', marginTop: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <div style={{ color: '#94a3b8', fontSize: '0.78rem', marginTop: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   {stat.label}
                 </div>
               </div>
@@ -311,7 +306,6 @@ export default function Home() {
       {/* ── PORTFOLIO PREVIEW ────────────────────────────────────── */}
       <section style={{ padding: '6rem 1.5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <SectionLabel>Portafolio</SectionLabel>
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
             <h2 style={{
               fontFamily: "'League Gothic', sans-serif",
@@ -324,7 +318,7 @@ export default function Home() {
             }}>
               {portfolioSection.heading}
             </h2>
-            <p style={{ color: '#64748b', lineHeight: '1.8', fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', letterSpacing: '0.01em' }}>
+            <p style={{ color: '#94a3b8', lineHeight: '1.8', fontSize: 'clamp(1rem, 1.3vw, 1.15rem)', letterSpacing: '0.01em' }}>
               {portfolioSection.paragraph}
             </p>
           </div>
@@ -373,9 +367,9 @@ export default function Home() {
                 alignItems: 'center',
                 gap: '0.5rem',
                 color: '#3b82f6',
-                fontFamily: "'League Gothic', sans-serif",
-                fontWeight: 700,
-                fontSize: '0.9rem',
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 600,
+                fontSize: '0.95rem',
                 textDecoration: 'none',
                 border: '1px solid rgba(37,99,235,0.3)',
                 padding: '0.65rem 1.5rem',
@@ -437,7 +431,7 @@ export default function Home() {
               {ctaSection.heading}
             </h2>
             <p style={{
-              color: '#64748b',
+              color: '#94a3b8',
               fontSize: 'clamp(1rem, 1.3vw, 1.15rem)',
               lineHeight: '1.8',
               letterSpacing: '0.01em',
@@ -481,6 +475,9 @@ export default function Home() {
           20%  { opacity: 1; }
           80%  { opacity: 1; }
           100% { transform: translateY(300%); opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+          * { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; }
         }
         @media (max-width: 640px) {
           .portfolio-home-grid {

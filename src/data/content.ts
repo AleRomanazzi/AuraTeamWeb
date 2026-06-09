@@ -111,20 +111,20 @@ export const portfolioVideos = {
 };
 
 export const portfolioImages = [
-  { src: pAlerom130,   alt: 'Sesión fotográfica' },
-  { src: pAlerom164,   alt: 'Retrato profesional' },
-  { src: pAnionuevo12, alt: 'Evento Año Nuevo' },
-  { src: pBmx24,       alt: 'BMX – acción' },
-  { src: pLennon29,    alt: 'Lennon – retrato' },
-  { src: pMateo010,    alt: 'Sesión exterior' },
-  { src: pTNX083a,     alt: 'TNX – evento' },
-  { src: pBmx49,       alt: 'BMX – retrato en acción' },
-  { src: pTNX107,      alt: 'TNX – vertical' },
-  { src: pTNX100,      alt: 'TNX – producción' },
-  { src: pMart7,       alt: 'Retrato creativo' },
-  { src: pTNX106,      alt: 'TNX – escena' },
-  { src: pPollock32,   alt: 'Pollock – retrato' },
-  { src: pRam33,       alt: 'Retrato ram' },
+  { src: pAlerom130,   alt: 'Producción fotográfica en exteriores, La Rioja' },
+  { src: pAlerom164,   alt: 'Retrato en estudio con iluminación controlada' },
+  { src: pAnionuevo12, alt: 'Cobertura de evento de Año Nuevo' },
+  { src: pBmx24,       alt: 'Fotografía de competencia BMX en la vía pública' },
+  { src: pLennon29,    alt: 'Retrato artístico para Lennon' },
+  { src: pMateo010,    alt: 'Sesión fotográfica en exteriores' },
+  { src: pTNX083a,     alt: 'Cobertura de evento TNX' },
+  { src: pBmx49,       alt: 'Retrato de ciclista BMX en acción' },
+  { src: pTNX107,      alt: 'Fotografía vertical de evento TNX' },
+  { src: pTNX100,      alt: 'Producción audiovisual TNX' },
+  { src: pMart7,       alt: 'Retrato artístico en estudio' },
+  { src: pTNX106,      alt: 'Escena de cobertura TNX' },
+  { src: pPollock32,   alt: 'Retrato artístico Pollock' },
+  { src: pRam33,       alt: 'Sesión de retrato Ram' },
 ];
 
 export const portfolioSection = {
@@ -135,7 +135,7 @@ export const portfolioSection = {
 
 export const ctaSection = {
   heading: '¿Hablamos sobre tu próximo proyecto?',
-  text: 'Contáctenos para contarnos qué tenés en mente. Estamos listos para asesorarte, responder tus dudas y crear una propuesta a medida que se adapte a tus necesidades.',
+  text: 'Contanos qué tenés en mente y diseñamos una propuesta para tu proyecto.',
   cta: { label: 'Contáctanos', href: '/contacto' },
 };
 

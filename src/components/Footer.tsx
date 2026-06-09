@@ -21,7 +21,7 @@ export default function Footer() {
                 el.parentNode?.insertBefore(text, el.nextSibling);
               }}
             />
-            <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: '1.6', maxWidth: '240px' }}>
+            <p style={{ color: '#94a3b8', fontSize: '0.875rem', lineHeight: '1.6', maxWidth: '240px' }}>
               Agencia creativa especializada en producción audiovisual, desarrollo web y comunicación digital.
             </p>
           </div>
@@ -36,9 +36,9 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     to={link.href}
-                    style={{ color: '#64748b', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
+                    style={{ color: '#94a3b8', textDecoration: 'none', fontSize: '0.875rem', transition: 'color 0.2s' }}
                     onMouseEnter={e => (e.currentTarget.style.color = '#60a5fa')}
-                    onMouseLeave={e => (e.currentTarget.style.color = '#64748b')}
+                    onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}
                   >
                     {link.label}
                   </Link>
@@ -55,13 +55,13 @@ export default function Footer() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
               <a
                 href={`mailto:${footer.email}`}
-                style={{ color: '#64748b', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
+                style={{ color: '#94a3b8', fontSize: '0.875rem', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={e => (e.currentTarget.style.color = '#60a5fa')}
-                onMouseLeave={e => (e.currentTarget.style.color = '#64748b')}
+                onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}
               >
                 {footer.email}
               </a>
-              <p style={{ color: '#64748b', fontSize: '0.875rem', lineHeight: '1.5' }}>
+              <p style={{ color: '#94a3b8', fontSize: '0.875rem', lineHeight: '1.5' }}>
                 {footer.address}
               </p>
             </div>
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div style={{ borderTop: '1px solid rgba(255,255,255,0.05)', paddingTop: '1.5rem', display: 'flex', justifyContent: 'center' }}>
-          <p style={{ color: '#374151', fontSize: '0.8rem' }}>{footer.copyright}</p>
+          <p style={{ color: '#94a3b8', fontSize: '0.8rem' }}>{footer.copyright}</p>
         </div>
       </div>
     </footer>

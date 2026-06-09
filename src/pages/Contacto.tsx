@@ -153,7 +153,7 @@ export default function Contacto() {
                 <h3 style={{ fontFamily: "'League Gothic',sans-serif", fontWeight: 700, fontSize: '1.6rem', letterSpacing: '0.02em', color: '#f1f5f9', marginBottom: '0.75rem' }}>
                   ¡Mensaje enviado!
                 </h3>
-                <p style={{ color: '#64748b', lineHeight: '1.7' }}>
+                <p style={{ color: '#94a3b8', lineHeight: '1.7' }}>
                   Gracias por escribirnos. Te contactaremos a la brevedad.
                 </p>
               </div>
@@ -271,7 +271,7 @@ export default function Contacto() {
                     ✉
                   </div>
                   <div>
-                    <p style={{ fontSize: '0.75rem', color: '#475569', marginBottom: '0.15rem', fontWeight: 600, letterSpacing: '0.05em' }}>EMAIL</p>
+                    <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.15rem', fontWeight: 600, letterSpacing: '0.05em' }}>EMAIL</p>
                     <a
                       href={`mailto:${contactPage.email}`}
                       style={{ color: '#94a3b8', fontSize: '1rem', letterSpacing: '0.01em', textDecoration: 'none', transition: 'color 0.2s' }}
@@ -298,7 +298,7 @@ export default function Contacto() {
                     📍
                   </div>
                   <div>
-                    <p style={{ fontSize: '0.75rem', color: '#475569', marginBottom: '0.15rem', fontWeight: 600, letterSpacing: '0.05em' }}>DIRECCIÓN</p>
+                    <p style={{ fontSize: '0.75rem', color: '#94a3b8', marginBottom: '0.15rem', fontWeight: 600, letterSpacing: '0.05em' }}>DIRECCIÓN</p>
                     <p style={{ color: '#94a3b8', fontSize: '1rem', lineHeight: '1.6', letterSpacing: '0.01em' }}>{contactPage.address}</p>
                   </div>
                 </div>
