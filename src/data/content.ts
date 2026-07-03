@@ -28,6 +28,19 @@ import marcaUrbanFitness from '../assets/MarcasTrabajadas/urbanfitness.png';
 import marcaHaut from '../assets/MarcasTrabajadas/Haut.png';
 import marcaDraKarina from '../assets/MarcasTrabajadas/DraKarinaSantellan.png';
 
+import vistasAltoque1 from '../assets/Vistas/vistas altoque 1.png';
+import vistasAltoque2 from '../assets/Vistas/vistas altoque 2.png';
+import vistasAltoque3 from '../assets/Vistas/vistas altoque 3.png';
+import vistasAltoque4 from '../assets/Vistas/vistas altoque 4.png';
+import vistasAltoque5 from '../assets/Vistas/vistas altoque 5.png';
+import vistasAltoque6 from '../assets/Vistas/vistas altoque 6.png';
+import vistasAltoque7 from '../assets/Vistas/vistas altoque 7.png';
+import vistasCycles1 from '../assets/Vistas/vistas cycles 1.png';
+import vistasCycles2 from '../assets/Vistas/vistas cycles 2.png';
+import vistasCycles3 from '../assets/Vistas/vistas cycles 3.png';
+import vistasCycles4 from '../assets/Vistas/vistas cycles 4.png';
+import vistasCycles5 from '../assets/Vistas/vistas cycles 5.png';
+
 import photoAnduFront from '../assets/EquipoAura/aurateam-35-andu.jpg';
 import photoAnduAction from '../assets/EquipoAura/aurateam-59-andu3.jpg';
 import photoAleFront from '../assets/EquipoAura/aurateam-4-ale.jpg';
@@ -82,6 +95,26 @@ export const serviceCards = [
     cta: { label: 'Leer más', href: '/servicios' },
     icon: '📱',
   },
+];
+
+export const reelHighlightsSection = {
+  heading: 'Contenido que llegó a miles',
+  paragraph: 'Reels que producimos para nuestros clientes y el alcance que consiguieron en redes.',
+};
+
+export const reelHighlights: { brand: string; platform: 'instagram' | 'tiktok'; src: string; alt: string }[] = [
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles1, alt: 'Reel de Instagram — Cycles Ferreyra, 11,4 mil visualizaciones' },
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles2, alt: 'Reel de Instagram — Cycles Ferreyra, 15,4 mil visualizaciones' },
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles3, alt: 'Reel de Instagram — Cycles Ferreyra, 24,2 mil visualizaciones' },
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles4, alt: 'Reel de Instagram — Cycles Ferreyra, 25,3 mil visualizaciones' },
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles5, alt: 'Reel de Instagram — Cycles Ferreyra, 10,1 mil visualizaciones' },
+  { brand: 'AlToque', platform: 'instagram', src: vistasAltoque1, alt: 'Reel de Instagram — AlToque, 13.2K visualizaciones' },
+  { brand: 'AlToque', platform: 'tiktok', src: vistasAltoque2, alt: 'Video de TikTok — AlToque, 38.9K visualizaciones' },
+  { brand: 'AlToque', platform: 'instagram', src: vistasAltoque3, alt: 'Reel de Instagram — AlToque, 11.4K visualizaciones' },
+  { brand: 'AlToque', platform: 'instagram', src: vistasAltoque4, alt: 'Reel de Instagram — AlToque, 20.9K visualizaciones' },
+  { brand: 'AlToque', platform: 'tiktok', src: vistasAltoque5, alt: 'Video de TikTok — AlToque, 126.6K visualizaciones' },
+  { brand: 'AlToque', platform: 'instagram', src: vistasAltoque6, alt: 'Reel de Instagram — AlToque, 13K visualizaciones' },
+  { brand: 'AlToque', platform: 'instagram', src: vistasAltoque7, alt: 'Reel de Instagram — AlToque, 54K visualizaciones' },
 ];
 
 export const clientLogos: { name: string; url: string }[] = [

@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
 import LogoSlider from '../components/LogoSlider';
+import ReelSlider from '../components/ReelSlider';
 import {
   hero,
   servicesIntro,
   serviceCards,
   clientLogos,
+  reelHighlightsSection,
+  reelHighlights,
   portfolioSection,
   portfolioImages,
   ctaSection,
@@ -300,6 +303,30 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* ── REEL HIGHLIGHTS ──────────────────────────────────────── */}
+      <section style={{ padding: '5rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{
+              fontFamily: "'League Gothic', sans-serif",
+              fontWeight: 800,
+              fontSize: 'clamp(2rem, 4vw, 3rem)',
+              letterSpacing: '0.03em',
+              color: '#f1f5f9',
+              marginBottom: '0.75rem',
+              lineHeight: 1.1,
+            }}>
+              {reelHighlightsSection.heading}
+            </h2>
+            <p style={{ color: '#94a3b8', fontSize: '1.05rem', letterSpacing: '0.01em', maxWidth: '520px', margin: '0 auto', lineHeight: '1.8' }}>
+              {reelHighlightsSection.paragraph}
+            </p>
+          </div>
+
+          <ReelSlider reels={reelHighlights} />
         </div>
       </section>
 
