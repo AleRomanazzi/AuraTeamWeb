@@ -146,9 +146,9 @@ export default function Navbar() {
                 style={{
                   display: 'block',
                   padding: '0.75rem 0',
-                  fontFamily: "'League Gothic', sans-serif",
-                  fontWeight: 600,
-                  fontSize: '1.1rem',
+                  fontFamily: "'Roboto', sans-serif",
+                  fontWeight: 500,
+                  fontSize: '1rem',
                   color: location.pathname === link.href ? '#60a5fa' : '#e2e8f0',
                   textDecoration: 'none',
                   borderBottom: '1px solid rgba(255,255,255,0.05)',
@@ -162,15 +162,16 @@ export default function Navbar() {
             <Link
               to={nav.cta.href}
               style={{
-                display: 'inline-block',
+                display: 'block',
                 background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
                 color: '#fff',
                 fontFamily: "'Roboto', sans-serif",
                 fontWeight: 600,
                 fontSize: '0.9rem',
-                padding: '0.65rem 1.5rem',
+                padding: '0.75rem 1.5rem',
                 borderRadius: '6px',
                 textDecoration: 'none',
+                textAlign: 'center',
               }}
             >
               {nav.cta.label}

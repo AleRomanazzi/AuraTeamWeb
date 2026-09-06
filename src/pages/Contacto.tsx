@@ -65,7 +65,7 @@ export default function Contacto() {
     <>
       {/* Header */}
       <section style={{
-        padding: '8rem 1.5rem 4rem',
+        padding: 'clamp(5.5rem, 12vw, 8rem) 1.5rem clamp(2.5rem, 6vw, 4rem)',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -116,7 +116,7 @@ export default function Contacto() {
       </section>
 
       {/* Content */}
-      <section style={{ padding: '1rem 1.5rem 6rem' }}>
+      <section style={{ padding: '1rem 1.5rem clamp(3.5rem, 10vw, 6rem)' }}>
         <div style={{
           maxWidth: '1100px',
           margin: '0 auto',

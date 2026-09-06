@@ -88,16 +88,18 @@ export default function Home() {
           pointerEvents: 'none',
         }} />
         {/* Scroll indicator — right side */}
-        <div style={{
-          position: 'absolute',
-          right: '2rem',
-          bottom: '2.5rem',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '0.75rem',
-          pointerEvents: 'none',
-        }}>
+        <div
+          className="hero-scroll-indicator"
+          style={{
+            position: 'absolute',
+            right: '2rem',
+            bottom: '2.5rem',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            gap: '0.75rem',
+            pointerEvents: 'none',
+          }}>
           <span style={{
             fontFamily: "'Roboto', sans-serif",
             fontSize: '0.65rem',
@@ -244,7 +246,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ─────────────────────────────────────────────── */}
-      <section style={{ padding: '6rem 1.5rem', position: 'relative' }}>
+      <section style={{ padding: 'clamp(3.5rem, 10vw, 6rem) 1.5rem', position: 'relative' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
             <h2 style={{
@@ -272,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* ── CLIENT LOGOS ─────────────────────────────────────────── */}
-      <section style={{ padding: '5rem 1.5rem', borderTop: '1px solid rgba(255,255,255,0.04)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+      <section style={{ padding: 'clamp(3rem, 8vw, 5rem) 1.5rem', borderTop: '1px solid rgba(255,255,255,0.04)', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 style={{
@@ -321,7 +323,7 @@ export default function Home() {
                 <div style={{ fontFamily: "'League Gothic', sans-serif", fontSize: '2.8rem', color: '#f1f5f9', lineHeight: 1, letterSpacing: '0.03em' }}>
                   {stat.value}
                 </div>
-                <div style={{ color: '#94a3b8', fontSize: '0.78rem', marginTop: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
+                <div style={{ color: '#94a3b8', fontSize: '0.82rem', marginTop: '0.4rem', letterSpacing: '0.06em', textTransform: 'uppercase' }}>
                   {stat.label}
                 </div>
               </div>
@@ -331,7 +333,7 @@ export default function Home() {
       </section>
 
       {/* ── REEL HIGHLIGHTS ──────────────────────────────────────── */}
-      <section style={{ padding: '5rem 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
+      <section style={{ padding: 'clamp(3rem, 8vw, 5rem) 1.5rem', borderBottom: '1px solid rgba(255,255,255,0.04)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
             <h2 style={{
@@ -355,7 +357,7 @@ export default function Home() {
       </section>
 
       {/* ── PORTFOLIO PREVIEW ────────────────────────────────────── */}
-      <section style={{ padding: '6rem 1.5rem' }}>
+      <section style={{ padding: 'clamp(3.5rem, 10vw, 6rem) 1.5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3.5rem' }}>
             <h2 style={{
@@ -430,7 +432,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA SECTION ──────────────────────────────────────────── */}
-      <section style={{ padding: '6rem 1.5rem' }}>
+      <section style={{ padding: 'clamp(3.5rem, 10vw, 6rem) 1.5rem' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <div style={{
             borderRadius: '24px',

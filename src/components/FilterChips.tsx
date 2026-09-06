@@ -24,7 +24,7 @@ export default function FilterChips({ filters, active, onChange }: Props) {
             key={f.value}
             onClick={() => onChange(f.value)}
             style={{
-              padding: '0.4rem 1rem',
+              padding: '0.5rem 1rem',
               borderRadius: '100px',
               border: isActive
                 ? '1px solid #3b82f6'

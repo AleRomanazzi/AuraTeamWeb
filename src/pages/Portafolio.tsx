@@ -11,7 +11,7 @@ export default function Portafolio() {
     <>
       {/* Page header */}
       <section style={{
-        padding: '8rem 1.5rem 3rem',
+        padding: 'clamp(5.5rem, 12vw, 8rem) 1.5rem clamp(2rem, 5vw, 3rem)',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -78,7 +78,7 @@ export default function Portafolio() {
       </section>
 
       {/* Tab navigation */}
-      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)', position: 'relative' }}>
         <div style={{
           maxWidth: '1200px',
           margin: '0 auto',
@@ -110,6 +110,7 @@ export default function Portafolio() {
             </NavLink>
           ))}
         </div>
+        <div className="tab-bar-fade" />
       </div>
 
       {/* Sub-page */}

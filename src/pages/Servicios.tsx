@@ -6,7 +6,7 @@ export default function Servicios() {
     <>
       {/* Page header */}
       <section style={{
-        padding: '8rem 1.5rem 4rem',
+        padding: 'clamp(5.5rem, 12vw, 8rem) 1.5rem clamp(2.5rem, 6vw, 4rem)',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -73,14 +73,14 @@ export default function Servicios() {
       </section>
 
       {/* Services content */}
-      <section style={{ padding: '2rem 1.5rem 6rem' }}>
+      <section style={{ padding: '2rem 1.5rem clamp(3.5rem, 10vw, 6rem)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
           <ServicesDetail />
         </div>
       </section>
 
       {/* CTA */}
-      <section style={{ padding: '4rem 1.5rem 6rem' }}>
+      <section style={{ padding: 'clamp(2.5rem, 6vw, 4rem) 1.5rem clamp(3.5rem, 10vw, 6rem)' }}>
         <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center' }}>
           <div style={{
             background: 'linear-gradient(135deg, rgba(37,99,235,0.1) 0%, rgba(6,11,20,0) 100%)',
