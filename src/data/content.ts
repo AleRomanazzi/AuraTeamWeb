@@ -76,17 +76,24 @@ export const FOTO_FILTERS: Array<{ value: FotoFilter | 'todos'; label: string }>
 ];
 
 export const DISENO_FILTERS: Array<{ value: DisenoFilter | 'todos'; label: string }> = [
-  { value: 'todos',   label: 'Todos' },
-  { value: 'flyers',  label: 'Flyers' },
-  { value: 'feed',    label: 'Feed & Redes' },
-  { value: 'arte',    label: 'Arte Digital' },
+  { value: 'todos',  label: 'Todos' },
+  { value: 'flyers', label: 'Flyers' },
+  { value: 'feed',   label: 'Feed & Redes' },
 ];
 
 // ─── Image generators ─────────────────────────────────────────────────────────
 
 function makeFoto(prefix: string, count: number, filter: FotoFilter, alt: string): FotoImage[] {
   return Array.from({ length: count }, (_, i) => ({
-    id: `portafolio/${prefix}_${String(i + 1).padStart(2, '0')}`,
+    id: `${prefix}_${String(i + 1).padStart(2, '0')}`,
+    alt,
+    filter,
+  }));
+}
+
+function makeFotoNums(prefix: string, nums: number[], filter: FotoFilter, alt: string): FotoImage[] {
+  return nums.map(n => ({
+    id: `${prefix}_${String(n).padStart(2, '0')}`,
     alt,
     filter,
   }));
@@ -94,7 +101,7 @@ function makeFoto(prefix: string, count: number, filter: FotoFilter, alt: string
 
 function makeDiseno(prefix: string, count: number, filter: DisenoFilter, alt: string): DisenoImage[] {
   return Array.from({ length: count }, (_, i) => ({
-    id: `portafolio/${prefix}_${String(i + 1).padStart(2, '0')}`,
+    id: `${prefix}_${String(i + 1).padStart(2, '0')}`,
     alt,
     filter,
   }));
@@ -105,23 +112,23 @@ function makeDiseno(prefix: string, count: number, filter: DisenoFilter, alt: st
 export const fotografiaImages: FotoImage[] = [
   ...makeFoto('01_Sesiones', 12, 'retratos',
     'Sesión de retratos fotográficos — Andrés Reynoso / AuraTeam, La Rioja'),
-  ...makeFoto('02_Evento_social', 44, 'eventos',
+  ...makeFotoNums('02_Evento_social',
+    [1,2,3,4,5,6,7,8,9,10,11,12,13,14,18,19,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44],
+    'eventos',
     'Cobertura fotográfica de evento social — Andrés Reynoso / AuraTeam, La Rioja'),
-  ...makeFoto('03_Deportes', 12, 'deportes',
+  ...makeFotoNums('03_Deportes', [2,3,6,8,9,10,12], 'deportes',
     'Fotografía deportiva — Andrés Reynoso / AuraTeam, La Rioja'),
   ...makeFoto('04_Fotoproducto', 10, 'fotoproducto',
     'Fotografía de producto — Andrés Reynoso / AuraTeam, La Rioja'),
-  ...makeFoto('05_Infantil_Bautismo', 10, 'infantil',
+  ...makeFotoNums('05_Infantil_Bautismo', [1,2,3,4,5,6,7,9,10], 'infantil',
     'Cobertura infantil y bautismo — Andrés Reynoso / AuraTeam, La Rioja'),
-  ...makeFoto('06_Institucional', 15, 'institucional',
+  ...makeFotoNums('06_Institucional', [1,2,3,4,7,8,9,11,12,14,15], 'institucional',
     'Fotografía institucional — Andrés Reynoso / AuraTeam, La Rioja'),
-  ...makeFoto('07_Paisajes_Bariloche', 6, 'viajes',
-    'Paisajes de Bariloche, Río Negro — Andrés Reynoso / AuraTeam'),
   ...makeFoto('08_Retratos_y_paisajes_Cataratas', 10, 'viajes',
     'Retratos y paisajes en Cataratas del Iguazú — Andrés Reynoso / AuraTeam'),
-  ...makeFoto('09_Retratos_Bariloche', 6, 'viajes',
+  ...makeFotoNums('09_Retratos_Bariloche', [3,4,5], 'viajes',
     'Retrato fotográfico en Bariloche, Río Negro — Andrés Reynoso / AuraTeam'),
-  ...makeFoto('10_Retratos_y_paisaje_Salta-Jujuy', 5, 'viajes',
+  ...makeFotoNums('10_Retratos_y_paisaje_Salta-Jujuy', [2,3,5], 'viajes',
     'Retratos y paisajes en Salta y Jujuy — Andrés Reynoso / AuraTeam'),
 ];
 
@@ -132,10 +139,6 @@ export const disenoImages: DisenoImage[] = [
     'Diseño de flyer para evento — AuraTeam, La Rioja'),
   ...makeDiseno('12_Disenos_feed', 34, 'feed',
     'Diseño de pieza para redes sociales — AuraTeam, La Rioja'),
-  ...makeDiseno('13_Ilustracion', 4, 'arte',
-    'Ilustración digital — Andrés Reynoso / AuraTeam'),
-  ...makeDiseno('14_Textos_personalizados', 7, 'arte',
-    'Lettering 3D personalizado — Andrés Reynoso / AuraTeam'),
 ];
 
 // ─── Videos ───────────────────────────────────────────────────────────────────
