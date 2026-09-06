@@ -92,13 +92,6 @@ function makeFoto(prefix: string, count: number, filter: FotoFilter, alt: string
   }));
 }
 
-function makeFotoNums(prefix: string, nums: number[], filter: FotoFilter, alt: string): FotoImage[] {
-  return nums.map(n => ({
-    id: `${prefix}_${String(n).padStart(2, '0')}`,
-    alt,
-    filter,
-  }));
-}
 
 function makeDiseno(prefix: string, count: number, filter: DisenoFilter, alt: string): DisenoImage[] {
   return Array.from({ length: count }, (_, i) => ({
