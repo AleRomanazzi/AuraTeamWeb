@@ -10,7 +10,8 @@ import {
   reelHighlightsSection,
   reelHighlights,
   portfolioSection,
-  portfolioImages,
+  fotografiaImages,
+  cloudUrl,
   ctaSection,
 } from '../data/content';
 
@@ -358,9 +359,9 @@ export default function Home() {
           }}
             className="portfolio-home-grid"
           >
-            {portfolioImages.slice(0, 5).map((img, i) => (
+            {fotografiaImages.slice(0, 5).map((img, i) => (
               <div
-                key={i}
+                key={img.id}
                 className="portfolio-item"
                 style={{
                   borderRadius: '12px',
@@ -372,7 +373,9 @@ export default function Home() {
                 }}
               >
                 <img
-                  src={img.src}
+                  src={cloudUrl(img.id, 800)}
+                  srcSet={`${cloudUrl(img.id, 400)} 400w, ${cloudUrl(img.id, 800)} 800w`}
+                  sizes="(max-width: 640px) 100vw, 33vw"
                   alt={img.alt}
                   style={{
                     width: '100%',

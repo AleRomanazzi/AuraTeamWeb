@@ -1,20 +1,5 @@
 import logoBlancoUrl from '../assets/logo blanco png.png';
 
-import pAlerom130   from '../assets/Portafolio/alerom-130.jpg';
-import pAlerom164   from '../assets/Portafolio/alerom-164.jpg';
-import pAnionuevo12 from '../assets/Portafolio/anionuevo-12.jpg';
-import pBmx24       from '../assets/Portafolio/bmx-24.jpg';
-import pBmx49       from '../assets/Portafolio/bmx-49.jpg';
-import pLennon29    from '../assets/Portafolio/lennon-29.jpg';
-import pMart7       from '../assets/Portafolio/mart-7.jpg';
-import pMateo010    from '../assets/Portafolio/mateo-010.jpg';
-import pPollock32   from '../assets/Portafolio/pollock-32.jpg';
-import pRam33       from '../assets/Portafolio/ram-33.jpg';
-import pTNX083a     from '../assets/Portafolio/TNX-083a.jpg';
-import pTNX100      from '../assets/Portafolio/TNX-100.jpg';
-import pTNX106      from '../assets/Portafolio/TNX-106.jpg';
-import pTNX107      from '../assets/Portafolio/TNX-107.jpg';
-
 import marcaEnredados from '../assets/MarcasTrabajadas/Enredados.png';
 import marcaNaranjaX from '../assets/MarcasTrabajadas/Naranja-X.png';
 import marcaAmnesia from '../assets/MarcasTrabajadas/Amnesia.png';
@@ -48,6 +33,166 @@ import photoAleAction from '../assets/EquipoAura/aurateam-56-ale2.jpg';
 import photoLautiFront from '../assets/EquipoAura/aurateam-52-lauti.jpg';
 import photoLautiAction from '../assets/EquipoAura/aurateam-58-lauti2.jpg';
 export { default as teamGroupPhoto } from '../assets/EquipoAura/aurateam-equipo.jpg';
+
+// ─── Cloudinary ───────────────────────────────────────────────────────────────
+
+const CLOUD = 'h8swbxzn';
+
+export const cloudUrl = (publicId: string, width: number): string =>
+  `https://res.cloudinary.com/${CLOUD}/image/upload/f_auto,q_auto,w_${width}/${publicId}`;
+
+// ─── Portfolio types ──────────────────────────────────────────────────────────
+
+export type FotoFilter =
+  | 'retratos' | 'eventos' | 'deportes' | 'fotoproducto'
+  | 'infantil' | 'institucional' | 'viajes';
+
+export type DisenoFilter = 'flyers' | 'feed' | 'arte';
+
+export interface FotoImage  { id: string; alt: string; filter: FotoFilter; }
+export interface DisenoImage { id: string; alt: string; filter: DisenoFilter; }
+
+export interface PortfolioVideo {
+  id: string;
+  title: string;
+  description: string;
+  client: string;
+  year: number;
+  badge: string;
+  featured?: boolean;
+}
+
+// ─── Filter labels ────────────────────────────────────────────────────────────
+
+export const FOTO_FILTERS: Array<{ value: FotoFilter | 'todos'; label: string }> = [
+  { value: 'todos',         label: 'Todos' },
+  { value: 'retratos',      label: 'Retratos' },
+  { value: 'eventos',       label: 'Eventos' },
+  { value: 'deportes',      label: 'Deportes' },
+  { value: 'fotoproducto',  label: 'Fotoproducto' },
+  { value: 'infantil',      label: 'Infantil' },
+  { value: 'institucional', label: 'Institucional' },
+  { value: 'viajes',        label: 'Viajes' },
+];
+
+export const DISENO_FILTERS: Array<{ value: DisenoFilter | 'todos'; label: string }> = [
+  { value: 'todos',   label: 'Todos' },
+  { value: 'flyers',  label: 'Flyers' },
+  { value: 'feed',    label: 'Feed & Redes' },
+  { value: 'arte',    label: 'Arte Digital' },
+];
+
+// ─── Image generators ─────────────────────────────────────────────────────────
+
+function makeFoto(prefix: string, count: number, filter: FotoFilter, alt: string): FotoImage[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: `portafolio/${prefix}_${String(i + 1).padStart(2, '0')}`,
+    alt,
+    filter,
+  }));
+}
+
+function makeDiseno(prefix: string, count: number, filter: DisenoFilter, alt: string): DisenoImage[] {
+  return Array.from({ length: count }, (_, i) => ({
+    id: `portafolio/${prefix}_${String(i + 1).padStart(2, '0')}`,
+    alt,
+    filter,
+  }));
+}
+
+// ─── Fotografía ───────────────────────────────────────────────────────────────
+
+export const fotografiaImages: FotoImage[] = [
+  ...makeFoto('01_Sesiones', 12, 'retratos',
+    'Sesión de retratos fotográficos — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('02_Evento_social', 44, 'eventos',
+    'Cobertura fotográfica de evento social — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('03_Deportes', 12, 'deportes',
+    'Fotografía deportiva — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('04_Fotoproducto', 10, 'fotoproducto',
+    'Fotografía de producto — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('05_Infantil_Bautismo', 10, 'infantil',
+    'Cobertura infantil y bautismo — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('06_Institucional', 15, 'institucional',
+    'Fotografía institucional — Andrés Reynoso / AuraTeam, La Rioja'),
+  ...makeFoto('07_Paisajes_Bariloche', 6, 'viajes',
+    'Paisajes de Bariloche, Río Negro — Andrés Reynoso / AuraTeam'),
+  ...makeFoto('08_Retratos_y_paisajes_Cataratas', 10, 'viajes',
+    'Retratos y paisajes en Cataratas del Iguazú — Andrés Reynoso / AuraTeam'),
+  ...makeFoto('09_Retratos_Bariloche', 6, 'viajes',
+    'Retrato fotográfico en Bariloche, Río Negro — Andrés Reynoso / AuraTeam'),
+  ...makeFoto('10_Retratos_y_paisaje_Salta-Jujuy', 5, 'viajes',
+    'Retratos y paisajes en Salta y Jujuy — Andrés Reynoso / AuraTeam'),
+];
+
+// ─── Diseño Gráfico ───────────────────────────────────────────────────────────
+
+export const disenoImages: DisenoImage[] = [
+  ...makeDiseno('11_Diseno_flyer', 23, 'flyers',
+    'Diseño de flyer para evento — AuraTeam, La Rioja'),
+  ...makeDiseno('12_Disenos_feed', 34, 'feed',
+    'Diseño de pieza para redes sociales — AuraTeam, La Rioja'),
+  ...makeDiseno('13_Ilustracion', 4, 'arte',
+    'Ilustración digital — Andrés Reynoso / AuraTeam'),
+  ...makeDiseno('14_Textos_personalizados', 7, 'arte',
+    'Lettering 3D personalizado — Andrés Reynoso / AuraTeam'),
+];
+
+// ─── Videos ───────────────────────────────────────────────────────────────────
+
+export const portfolioVideos: PortfolioVideo[] = [
+  {
+    id: 'QEZB7AHm3Dc',
+    title: 'SerUrbano — Producción para cine',
+    description: 'Corto institucional proyectado en pantalla de cine durante un evento. Muestra la tecnología e infraestructura de la clínica estética.',
+    client: 'SerUrbano',
+    year: 2025,
+    badge: 'Institucional',
+    featured: true,
+  },
+  {
+    id: 'Ox-eOGHe33E',
+    title: 'UrbanGames 2025 — UrbanFitness',
+    description: 'Reel de la primera edición de UrbanGames: cómo y dónde se desarrollará la competencia de crossfit.',
+    client: 'UrbanFitness',
+    year: 2025,
+    badge: 'Deportes',
+  },
+  {
+    id: 'jL-90vBF0Q8',
+    title: 'BMX en el Skatepark de La Rioja',
+    description: 'Grabación con drone de trucos de BMX en el skatepark de La Rioja.',
+    client: 'Contenido propio',
+    year: 2025,
+    badge: 'Deportes',
+  },
+  {
+    id: 'Gz6UJzn6AuE',
+    title: 'Lennon — Navidad 2025',
+    description: 'Reel con tono cómico mostrando el movimiento del local durante la temporada navideña.',
+    client: 'Lennon',
+    year: 2025,
+    badge: 'Contenido de marca',
+  },
+  {
+    id: '5N_lBNewBEM',
+    title: 'Cycles Ferreyra — Fibra de carbono',
+    description: 'Reel mostrando el ingreso de partes de fibra de carbono para bicicletas.',
+    client: 'Cycles Ferreyra',
+    year: 2025,
+    badge: 'Producto',
+  },
+  {
+    id: 'otulYAXQmJ4',
+    title: 'Las Grutas — Paisaje y playas',
+    description: 'Video de paisaje de Las Grutas, en el sur de Argentina, mostrando playas y vistas del lugar.',
+    client: 'AuraTeam',
+    year: 2025,
+    badge: 'Paisaje',
+  },
+];
+
+// ─── Existing site content ────────────────────────────────────────────────────
 
 export const nav = {
   logo: logoBlancoUrl,
@@ -109,55 +254,27 @@ export const reelHighlights: { brand: string; platform: 'instagram' | 'tiktok'; 
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles4, alt: 'Reel de Instagram — Cycles Ferreyra, 25,3 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles5, alt: 'Reel de Instagram — Cycles Ferreyra, 10,1 mil visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque1, alt: 'Reel de Instagram — AlToque, 13.2K visualizaciones' },
-  { brand: 'AlToque', platform: 'tiktok', src: vistasAltoque2, alt: 'Video de TikTok — AlToque, 38.9K visualizaciones' },
+  { brand: 'AlToque', platform: 'tiktok',    src: vistasAltoque2, alt: 'Video de TikTok — AlToque, 38.9K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque3, alt: 'Reel de Instagram — AlToque, 11.4K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque4, alt: 'Reel de Instagram — AlToque, 20.9K visualizaciones' },
-  { brand: 'AlToque', platform: 'tiktok', src: vistasAltoque5, alt: 'Video de TikTok — AlToque, 126.6K visualizaciones' },
+  { brand: 'AlToque', platform: 'tiktok',    src: vistasAltoque5, alt: 'Video de TikTok — AlToque, 126.6K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque6, alt: 'Reel de Instagram — AlToque, 13K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque7, alt: 'Reel de Instagram — AlToque, 54K visualizaciones' },
 ];
 
 export const clientLogos: { name: string; url: string }[] = [
-  { name: 'Enredados', url: marcaEnredados },
-  { name: 'Naranja X', url: marcaNaranjaX },
-  { name: 'Amnesia', url: marcaAmnesia },
-  { name: 'AlToque', url: marcaAlToque },
-  { name: 'CC11', url: marcaCC11 },
-  { name: 'FarmaLaR', url: marcaFarmaLaR },
-  { name: 'Cycles Ferreyra', url: marcaCyclesFerreyra },
-  { name: 'CEFN5', url: marcaCEFN5 },
-  { name: 'Lennon', url: marcaLennon },
-  { name: 'Urban Fitness', url: marcaUrbanFitness },
-  { name: 'Haut', url: marcaHaut },
+  { name: 'Enredados',            url: marcaEnredados },
+  { name: 'Naranja X',            url: marcaNaranjaX },
+  { name: 'Amnesia',              url: marcaAmnesia },
+  { name: 'AlToque',              url: marcaAlToque },
+  { name: 'CC11',                 url: marcaCC11 },
+  { name: 'FarmaLaR',             url: marcaFarmaLaR },
+  { name: 'Cycles Ferreyra',      url: marcaCyclesFerreyra },
+  { name: 'CEFN5',                url: marcaCEFN5 },
+  { name: 'Lennon',               url: marcaLennon },
+  { name: 'Urban Fitness',        url: marcaUrbanFitness },
+  { name: 'Haut',                 url: marcaHaut },
   { name: 'Dra. Karina Santellan', url: marcaDraKarina },
-];
-
-export const portfolioVideos = {
-  featured: { id: 'QEZB7AHm3Dc', title: 'Producción audiovisual' },
-  shorts: [
-    { id: 'Ox-eOGHe33E', title: 'Short 1' },
-    { id: 'jL-90vBF0Q8', title: 'Short 2' },
-    { id: 'Gz6UJzn6AuE', title: 'Short 3' },
-    { id: '5N_lBNewBEM', title: 'Short 4' },
-    { id: 'otulYAXQmJ4', title: 'Short 5' },
-  ],
-};
-
-export const portfolioImages = [
-  { src: pAlerom130,   alt: 'Producción fotográfica en exteriores, La Rioja' },
-  { src: pAlerom164,   alt: 'Retrato en estudio con iluminación controlada' },
-  { src: pAnionuevo12, alt: 'Cobertura de evento de Año Nuevo' },
-  { src: pBmx24,       alt: 'Fotografía de competencia BMX en la vía pública' },
-  { src: pLennon29,    alt: 'Retrato artístico para Lennon' },
-  { src: pMateo010,    alt: 'Sesión fotográfica en exteriores' },
-  { src: pTNX083a,     alt: 'Cobertura de evento TNX' },
-  { src: pBmx49,       alt: 'Retrato de ciclista BMX en acción' },
-  { src: pTNX107,      alt: 'Fotografía vertical de evento TNX' },
-  { src: pTNX100,      alt: 'Producción audiovisual TNX' },
-  { src: pMart7,       alt: 'Retrato artístico en estudio' },
-  { src: pTNX106,      alt: 'Escena de cobertura TNX' },
-  { src: pPollock32,   alt: 'Retrato artístico Pollock' },
-  { src: pRam33,       alt: 'Sesión de retrato Ram' },
 ];
 
 export const portfolioSection = {

@@ -1,31 +1,17 @@
-import PortfolioGrid from '../components/PortfolioGrid';
-import VideoGallery from '../components/VideoGallery';
+import { NavLink, Outlet } from 'react-router-dom';
 
-function SectionLabel({ label }: { label: string }) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
-      <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.07)' }} />
-      <span style={{
-        fontFamily: "'Roboto', sans-serif",
-        fontSize: '0.75rem',
-        fontWeight: 600,
-        letterSpacing: '0.14em',
-        textTransform: 'uppercase',
-        color: '#3b82f6',
-      }}>
-        {label}
-      </span>
-      <div style={{ flex: 1, height: '1px', background: 'rgba(255,255,255,0.07)' }} />
-    </div>
-  );
-}
+const TABS = [
+  { path: 'fotografia',  label: 'Fotografía' },
+  { path: 'diseno',      label: 'Diseño Gráfico' },
+  { path: 'audiovisual', label: 'Audiovisual' },
+];
 
 export default function Portafolio() {
   return (
     <>
       {/* Page header */}
       <section style={{
-        padding: '8rem 1.5rem 4rem',
+        padding: '8rem 1.5rem 3rem',
         position: 'relative',
         overflow: 'hidden',
       }}>
@@ -86,26 +72,50 @@ export default function Portafolio() {
               opacity: 0,
             }}
           >
-            Videos y fotografía que hablan por sí solos. Hacé clic en cualquier imagen para verla en detalle.
+            Videos, fotografía y diseño que hablan por sí solos. Hacé clic en cualquier pieza para verla en detalle.
           </p>
         </div>
       </section>
 
-      {/* Videos section */}
-      <section style={{ padding: '0 1.5rem 5rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <SectionLabel label="Videos" />
-          <VideoGallery />
+      {/* Tab navigation */}
+      <div style={{ borderBottom: '1px solid rgba(255,255,255,0.07)' }}>
+        <div style={{
+          maxWidth: '1200px',
+          margin: '0 auto',
+          padding: '0 1.5rem',
+          display: 'flex',
+          gap: '0',
+          overflowX: 'auto',
+          scrollbarWidth: 'none',
+        }}>
+          {TABS.map(tab => (
+            <NavLink
+              key={tab.path}
+              to={`/portafolio/${tab.path}`}
+              style={({ isActive }) => ({
+                padding: '0.9rem 1.5rem',
+                fontSize: '0.875rem',
+                fontFamily: "'Roboto', sans-serif",
+                fontWeight: 600,
+                letterSpacing: '0.05em',
+                color: isActive ? '#3b82f6' : '#64748b',
+                borderBottom: isActive ? '2px solid #3b82f6' : '2px solid transparent',
+                textDecoration: 'none',
+                transition: 'color 0.2s',
+                marginBottom: '-1px',
+                whiteSpace: 'nowrap',
+              })}
+            >
+              {tab.label}
+            </NavLink>
+          ))}
         </div>
-      </section>
+      </div>
 
-      {/* Photography section */}
-      <section style={{ padding: '0 1.5rem 6rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <SectionLabel label="Fotografía" />
-          <PortfolioGrid />
-        </div>
-      </section>
+      {/* Sub-page */}
+      <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '2.5rem 1.5rem 6rem' }}>
+        <Outlet />
+      </div>
     </>
   );
 }
