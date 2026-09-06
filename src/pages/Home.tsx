@@ -10,10 +10,33 @@ import {
   reelHighlightsSection,
   reelHighlights,
   portfolioSection,
-  fotografiaImages,
   cloudUrl,
   ctaSection,
 } from '../data/content';
+
+const SERVICE_CARDS = [
+  {
+    label: 'Fotografía',
+    tags: 'Eventos · Retratos · Deportes · Viajes',
+    href: '/portafolio/fotografia',
+    imgSrc: cloudUrl('02_Evento_social_20', 900),
+    isVideo: false,
+  },
+  {
+    label: 'Diseño Gráfico',
+    tags: 'Flyers · Feed & Redes · Arte Digital',
+    href: '/portafolio/diseno',
+    imgSrc: cloudUrl('11_Diseno_flyer_05', 900),
+    isVideo: false,
+  },
+  {
+    label: 'Audiovisual',
+    tags: 'Institucional · Deportes · Paisaje',
+    href: '/portafolio/audiovisual',
+    imgSrc: 'https://img.youtube.com/vi/QEZB7AHm3Dc/maxresdefault.jpg',
+    isVideo: true,
+  },
+];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -351,41 +374,23 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Preview grid — 5 imágenes: 1 destacada (span 2) + 4 cuadradas */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(3, 1fr)',
-            gap: '0.75rem',
-          }}
-            className="portfolio-home-grid"
-          >
-            {fotografiaImages.slice(0, 5).map((img, i) => (
-              <div
-                key={img.id}
-                className="portfolio-item"
-                style={{
-                  borderRadius: '12px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  background: '#0b1221',
-                  gridColumn: i === 0 ? 'span 2' : undefined,
-                  aspectRatio: i === 0 ? '4/3' : '1/1',
-                }}
-              >
-                <img
-                  src={cloudUrl(img.id, 800)}
-                  srcSet={`${cloudUrl(img.id, 400)} 400w, ${cloudUrl(img.id, 800)} 800w`}
-                  sizes="(max-width: 640px) 100vw, 33vw"
-                  alt={img.alt}
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    display: 'block',
-                  }}
-                  loading="lazy"
-                />
-              </div>
+          <div className="service-cards-grid">
+            {SERVICE_CARDS.map(card => (
+              <Link key={card.href} to={card.href} className="service-card">
+                <img src={card.imgSrc} alt={card.label} loading="lazy" />
+                {card.isVideo && (
+                  <div className="service-card-play">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="white" style={{ marginLeft: '2px' }}>
+                      <polygon points="5,3 19,12 5,21" />
+                    </svg>
+                  </div>
+                )}
+                <div className="service-card-overlay">
+                  <p className="service-card-tags">{card.tags}</p>
+                  <h3 className="service-card-title">{card.label}</h3>
+                  <p className="service-card-cta">Explorar →</p>
+                </div>
+              </Link>
             ))}
           </div>
 
