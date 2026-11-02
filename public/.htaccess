@@ -1,0 +1,12 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Sirve archivos y carpetas reales tal cual (assets, imagenes, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Cualquier otra ruta la resuelve React Router del lado del cliente
+  RewriteRule ^ /index.html [L]
+</IfModule>

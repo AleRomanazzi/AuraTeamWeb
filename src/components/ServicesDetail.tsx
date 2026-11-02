@@ -1,7 +1,7 @@
 import { serviciosPage } from '../data/content';
 
 const categoryIcons: Record<string, string> = {
-  'Fotografía y diseño multimedia': '📸',
+  'Fotografía y Diseño Multimedia': '📸',
   'Desarrollo web': '🌐',
   'Comunicación y gestión': '📣',
 };

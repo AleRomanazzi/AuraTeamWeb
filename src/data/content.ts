@@ -241,6 +241,13 @@ export const serviceCards = [
     cta: { label: 'Leer más', href: '/servicios' },
     icon: '📱',
   },
+  {
+    title: 'Gestión de Meta Ads',
+    description:
+      'Potenciamos tu alcance con campañas en Facebook e Instagram: definimos el público ideal, creamos los anuncios y optimizamos la inversión para que cada peso rinda.',
+    cta: { label: 'Leer más', href: '/servicios' },
+    icon: '🎯',
+  },
 ];
 
 export const reelHighlightsSection = {
@@ -318,6 +325,7 @@ export const serviciosPage = [
     category: 'Comunicación y gestión',
     items: [
       { title: 'Gestión de redes sociales', description: 'Planificación de contenido, gestion y lectura y uso de estadísticas.' },
+      { title: 'Gestión de Meta Ads', description: 'Campañas publicitarias en Facebook e Instagram: segmentación de público, creatividades, optimización del presupuesto y reportes de resultados.' },
       { title: 'Estrategias de contenido', description: 'Ideación, calendarización y ejecución para alcanzar objetivos reales.' },
       { title: 'Comunicación institucional', description: 'Redacción, revisión de documentos, gestión de correos, identidad verbal, comunicación interna y más.' },
     ],

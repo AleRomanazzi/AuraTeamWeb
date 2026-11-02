@@ -22,8 +22,8 @@ export default function App() {
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/portafolio" element={<Portafolio />}>
               <Route index element={<Navigate to="fotografia" replace />} />
-              <Route path="fotografia" element={<Fotografia />} />
-              <Route path="diseno" element={<Diseno />} />
+              <Route path="fotografia/:filtro?" element={<Fotografia />} />
+              <Route path="diseno/:filtro?" element={<Diseno />} />
               <Route path="audiovisual" element={<Audiovisual />} />
             </Route>
             <Route path="/nuestro-equipo" element={<Equipo />} />

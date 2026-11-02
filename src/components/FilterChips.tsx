@@ -1,3 +1,5 @@
+import ShareLinkButton from './ShareLinkButton';
+
 interface Filter {
   value: string;
   label: string;
@@ -10,11 +12,14 @@ interface Props {
 }
 
 export default function FilterChips({ filters, active, onChange }: Props) {
+  const activeLabel = filters.find(f => f.value === active)?.label;
+
   return (
     <div style={{
       display: 'flex',
       gap: '0.5rem',
       flexWrap: 'wrap',
+      alignItems: 'center',
       marginBottom: '1.75rem',
     }}>
       {filters.map(f => {
@@ -23,6 +28,7 @@ export default function FilterChips({ filters, active, onChange }: Props) {
           <button
             key={f.value}
             onClick={() => onChange(f.value)}
+            aria-pressed={isActive}
             style={{
               padding: '0.5rem 1rem',
               borderRadius: '100px',
@@ -46,6 +52,11 @@ export default function FilterChips({ filters, active, onChange }: Props) {
           </button>
         );
       })}
+      <div style={{ marginLeft: 'auto' }}>
+        <ShareLinkButton
+          title={activeLabel && active !== 'todos' ? `AuraTeam — ${activeLabel}` : 'Portafolio AuraTeam'}
+        />
+      </div>
     </div>
   );
 }
