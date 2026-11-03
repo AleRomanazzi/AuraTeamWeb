@@ -96,6 +96,8 @@ export default function ReelSlider({ reels }: { reels: Reel[] }) {
                 width: '100%',
                 height: '100%',
                 objectFit: 'cover',
+                // Las capturas traen un borde blanco de ~2-6px; el zoom lo deja fuera del recorte.
+                transform: 'scale(1.06)',
                 display: 'block',
                 pointerEvents: 'none',
               }}
