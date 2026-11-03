@@ -25,6 +25,10 @@ import vistasCycles2 from '../assets/Vistas/vistas cycles 2.png';
 import vistasCycles3 from '../assets/Vistas/vistas cycles 3.png';
 import vistasCycles4 from '../assets/Vistas/vistas cycles 4.png';
 import vistasCycles5 from '../assets/Vistas/vistas cycles 5.png';
+import vistasCycles6 from '../assets/Vistas/vistas cycles 2.1.jpg';
+import vistasCycles7 from '../assets/Vistas/vistas cycles 5.jpg';
+import vistasLennon1 from '../assets/Vistas/vistas lennon 1.jpg';
+import vistasLennon2 from '../assets/Vistas/vistas lennon 2.jpg';
 
 import photoAnduFront from '../assets/EquipoAura/aurateam-35-andu.jpg';
 import photoAnduAction from '../assets/EquipoAura/aurateam-59-andu3.jpg';
@@ -256,11 +260,13 @@ export const reelHighlightsSection = {
 };
 
 export const reelHighlights: { brand: string; platform: 'instagram' | 'tiktok'; src: string; alt: string }[] = [
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles7, alt: 'Reel de Instagram — Cycles Ferreyra, 402 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles1, alt: 'Reel de Instagram — Cycles Ferreyra, 11,4 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles2, alt: 'Reel de Instagram — Cycles Ferreyra, 15,4 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles3, alt: 'Reel de Instagram — Cycles Ferreyra, 24,2 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles4, alt: 'Reel de Instagram — Cycles Ferreyra, 25,3 mil visualizaciones' },
   { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles5, alt: 'Reel de Instagram — Cycles Ferreyra, 10,1 mil visualizaciones' },
+  { brand: 'Cycles Ferreyra', platform: 'instagram', src: vistasCycles6, alt: 'Reel de Instagram — Cycles Ferreyra, 25,3 mil visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque1, alt: 'Reel de Instagram — AlToque, 13.2K visualizaciones' },
   { brand: 'AlToque', platform: 'tiktok',    src: vistasAltoque2, alt: 'Video de TikTok — AlToque, 38.9K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque3, alt: 'Reel de Instagram — AlToque, 11.4K visualizaciones' },
@@ -268,6 +274,8 @@ export const reelHighlights: { brand: string; platform: 'instagram' | 'tiktok'; 
   { brand: 'AlToque', platform: 'tiktok',    src: vistasAltoque5, alt: 'Video de TikTok — AlToque, 126.6K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque6, alt: 'Reel de Instagram — AlToque, 13K visualizaciones' },
   { brand: 'AlToque', platform: 'instagram', src: vistasAltoque7, alt: 'Reel de Instagram — AlToque, 54K visualizaciones' },
+  { brand: 'Lennon', platform: 'instagram', src: vistasLennon1, alt: 'Reel de Instagram — Lennon, 23,1 mil visualizaciones' },
+  { brand: 'Lennon', platform: 'instagram', src: vistasLennon2, alt: 'Reel de Instagram — Lennon, 10 mil visualizaciones' },
 ];
 
 export const clientLogos: { name: string; url: string }[] = [
